@@ -27,9 +27,19 @@ public class DuckSimulator {
 
         System.out.println("The ducks quacked " + QuackCounter.getQuacks() + " times");
 
-        System.out.println("\nECHO");
+        System.out.println("\n-- ECHO --");
         simulate(testEcho);
         simulate(testEcho2);
+
+        System.out.println("----------");
+
+        Flock flockAllDucks = new Flock();
+        flockAllDucks.add(redheadDuck);
+        flockAllDucks.add(duckCall);
+        flockAllDucks.add(rubberDuck);
+        flockAllDucks.add(gooseDuck);
+        simulate(flockAllDucks);
+        System.out.println("The ducks quacked " + QuackCounter.getQuacks() + " times");
     }
 
 
